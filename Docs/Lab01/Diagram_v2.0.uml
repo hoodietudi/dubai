@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>pizzashop.gui.OrdersGUI</OriginalElement>
+  <nodes>
+    <node x="1194.0" y="1044.0">pizzashop.gui.OrdersGUI</node>
+    <node x="885.0" y="765.0">java.lang.Thread.UncaughtExceptionHandler</node>
+    <node x="32.0" y="685.0">pizzashop.utils.PaymentOperation</node>
+    <node x="885.0" y="869.0">pizzashop.handler.Handler</node>
+    <node x="285.0" y="685.0">pizzashop.model.MenuDataModel</node>
+    <node x="53.0" y="519.0">pizzashop.model.PaymentType</node>
+    <node x="688.0" y="415.0">javafx.application.Application.Parameters</node>
+    <node x="0.0" y="12.0">java.io.Serializable</node>
+    <node x="927.0" y="685.0">java.lang.FunctionalInterface</node>
+    <node x="711.25" y="0.0">javafx.application.Application</node>
+    <node x="0.0" y="833.0">pizzashop.utils.PaymentAlert</node>
+    <node x="602.0" y="685.0">pizzashop.controller.KitchenGUIController</node>
+    <node x="31.5" y="104.0">java.lang.Enum</node>
+    <node x="0.0" y="1044.0">pizzashop.service.PizzaService</node>
+    <node x="365.0" y="1044.0">pizzashop.repository.PaymentRepository</node>
+    <node x="351.0" y="0.0">pizzashop.controller.OrdersGUIController</node>
+    <node x="164.0" y="0.0">java.lang.Comparable</node>
+    <node x="0.0" y="1278.0">pizzashop.gui.KitchenGUI</node>
+    <node x="1084.0" y="0.0">pizzashop.controller.MainGUIController</node>
+    <node x="909.0" y="1044.0">pizzashop.model.Payment</node>
+    <node x="611.0" y="1044.0">pizzashop.repository.MenuRepository</node>
+    <node x="889.0" y="437.5">pizzashop.Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="pizzashop.handler.Handler" target="java.lang.Thread.UncaughtExceptionHandler">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="javafx.application.Application.Parameters" target="javafx.application.Application">
+      <point x="0.0" y="-60.5" />
+      <point x="778.5" y="390.0" />
+      <point x="791.25" y="390.0" />
+      <point x="-80.0" y="182.5" />
+    </edge>
+    <edge source="pizzashop.utils.PaymentAlert" target="pizzashop.utils.PaymentOperation">
+      <point x="0.0" y="-83.0" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="pizzashop.model.PaymentType" target="java.lang.Enum">
+      <point x="0.0" y="-60.5" />
+      <point x="0.0" y="182.5" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.io.Serializable">
+      <point x="-61.0" y="-182.5" />
+      <point x="92.5" y="79.0" />
+      <point x="72.0" y="79.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.lang.Comparable">
+      <point x="61.0" y="-182.5" />
+      <point x="214.5" y="79.0" />
+      <point x="235.0" y="79.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.lang.Thread.UncaughtExceptionHandler" target="java.lang.FunctionalInterface">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="pizzashop.Main" target="javafx.application.Application">
+      <point x="0.0" y="-38.0" />
+      <point x="964.0" y="390.0" />
+      <point x="951.25" y="390.0" />
+      <point x="80.0" y="182.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.49556213017751477" x="721.5" y="666.0" />
+  <SelectedNodes>
+    <node>pizzashop.gui.OrdersGUI</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
