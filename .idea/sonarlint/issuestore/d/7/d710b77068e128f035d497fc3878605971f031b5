@@ -1,0 +1,9 @@
+
+Q	java:S125"<This block of commented-out lines of code should be removed.(‹Ýôà
+M	java:S106-"9Replace this use of System.out or System.err by a logger.(„†K
+V	java:S125,"<This block of commented-out lines of code should be removed.(žŠ‘Ÿûÿÿÿÿ
+S	java:S106."9Replace this use of System.out or System.err by a logger.(£ÝÕ˜ùÿÿÿÿ
+>
+java:S1604&"(Make this anonymous inner class a lambda(®Þñç
+P
+java:S36553"5Call "result.isPresent()" before accessing the value.(ë¡¦êùÿÿÿÿ
