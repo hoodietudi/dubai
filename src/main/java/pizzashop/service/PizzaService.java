@@ -1,31 +1,44 @@
 package pizzashop.service;
 
-import pizzashop.model.MenuDataModel;
-import pizzashop.model.Payment;
-import pizzashop.model.PaymentType;
-import pizzashop.repository.MenuRepository;
-import pizzashop.repository.PaymentRepository;
+        import pizzashop.model.MenuDataModel;
+        import pizzashop.model.Payment;
+        import pizzashop.model.PaymentType;
+        import pizzashop.repository.MenuRepository;
+        import pizzashop.repository.PaymentRepository;
+        import pizzashop.validator.PaymentValidator;
 
-import java.util.List;
+        import java.util.List;
 
 public class PizzaService {
 
     private MenuRepository menuRepo;
     private PaymentRepository payRepo;
+    private PaymentValidator validator;
 
     public PizzaService(MenuRepository menuRepo, PaymentRepository payRepo){
         this.menuRepo=menuRepo;
         this.payRepo=payRepo;
+        validator = new PaymentValidator();
     }
 
     public List<MenuDataModel> getMenuData(){return menuRepo.getMenu();}
 
-    public List<Payment> getPayments(){return payRepo.getAll(); }
+    public List<Payment> getPayments(){
+        if (payRepo == null) return null;
 
-    public void
-    addPayment(int table, PaymentType type, double amount){
+        return payRepo.getAll();
+    }
+
+    public boolean addPayment(int table, PaymentType type, double amount) throws Exception {
+        validator.validateTable(table);
+        validator.validateAmount(amount);
         Payment payment= new Payment(table, type, amount);
         payRepo.add(payment);
+        return true; //initial aveam public void, pentru lab02 am schimbat in boolean
+    }
+
+    public void setPayment(PaymentRepository payRepo) {
+        this.payRepo = payRepo;
     }
 
     public double getTotalAmount(PaymentType type){

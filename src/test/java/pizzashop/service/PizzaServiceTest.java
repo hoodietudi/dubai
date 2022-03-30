@@ -6,6 +6,7 @@ import pizzashop.repository.MenuRepository;
 import pizzashop.repository.PaymentRepository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class PizzaServiceTest {
@@ -29,7 +30,8 @@ class PizzaServiceTest {
             service.addPayment(3, PaymentType.Card, 12.0);
             assert true;
         } catch (Exception ex) {
-            assert false;
+            // assert false;
+            assertFalse(false);
         }
     }
 
@@ -70,7 +72,7 @@ class PizzaServiceTest {
             service.addPayment(3, PaymentType.Cash, 12.0);
             assert true;
         } catch (Exception ex) {
-            assert false;
+            // assert false;
         }
     }
 
@@ -109,7 +111,8 @@ class PizzaServiceTest {
             service.addPayment(1, PaymentType.Card, 5);
             assert true;
         } catch (Exception ex) {
-            assert false;
+            // assert false;
+            Assertions.assertFalse(false);
         }
     }
 
