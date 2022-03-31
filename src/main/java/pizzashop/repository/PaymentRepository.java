@@ -16,7 +16,7 @@ public class PaymentRepository {
 
     public PaymentRepository(){
         this.paymentList = new ArrayList<>();
-        readPayments();
+//        readPayments();
     }
 
     private void readPayments(){
@@ -60,11 +60,14 @@ public class PaymentRepository {
 
     public void writeAll(){
         ClassLoader classLoader = PaymentRepository.class.getClassLoader();
-        File file = new File(classLoader.getResource(filename).getFile());
+        //File file = new File(classLoader.getResource(filename).getFile());
+
+        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+        InputStream file = classloader.getResourceAsStream("data/payments.txt");
 
         BufferedWriter bw = null;
         try {
-            bw = new BufferedWriter(new FileWriter(file));
+            bw = new BufferedWriter(new FileWriter(String.valueOf(file)));
             for (Payment p:paymentList) {
                 System.out.println(p.toString());
                 bw.write(p.toString());
