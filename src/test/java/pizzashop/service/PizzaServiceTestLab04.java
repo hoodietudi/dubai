@@ -13,24 +13,19 @@ import static org.mockito.Mockito.mock;
 
 public class PizzaServiceTestLab04 {
     Payment payment;
-
     @Mock
     private PaymentRepository repository;
-
     @Mock
     private MenuRepository menuRepository;
-
     @InjectMocks
     private PizzaService pizzaService= new PizzaService(new MenuRepository(),new PaymentRepository());
-
     @BeforeEach
     void setUp() {
         payment = mock(Payment.class);
         MockitoAnnotations.initMocks(this);
     }
-
     @Test
-    public void addPayment() throws Exception {
+    void addPayment() throws Exception {
         Mockito.when(repository.getAll()).thenReturn(null);
         assert repository.getAll() == null;
 
@@ -49,7 +44,7 @@ public class PizzaServiceTestLab04 {
     }
 
     @Test
-    public void testPaymentRepository() {
+    void testPaymentRepository() {
         PaymentRepository paymentRepository = mock(PaymentRepository.class);
 
         Payment payment1 = new Payment(1, PaymentType.Card, 10d);
@@ -70,7 +65,7 @@ public class PizzaServiceTestLab04 {
     }
 
     @Test
-    public void totalAmount() throws Exception {
+    void totalAmount() throws Exception {
         pizzaService = mock(PizzaService.class);
 
         pizzaService.addPayment(1, PaymentType.Card, 10d);
@@ -78,9 +73,7 @@ public class PizzaServiceTestLab04 {
         pizzaService.addPayment(3, PaymentType.Cash, 30d);
 
         Mockito.when(pizzaService.getTotalAmount(PaymentType.Card)).thenReturn(30d);
-
         pizzaService.getTotalAmount(PaymentType.Card);
-
         Mockito.verify(pizzaService).getTotalAmount(PaymentType.Card);
     }
 
